@@ -5,6 +5,8 @@
     --color-fondo: #ededed;
     --color-botton-inactivo: #0f1618;
     --font-standar:'DM Serif Display', serif;
+    --header-tamaño: 5rem;
+    --Footer-tamaño: 4rem;
 }
 /*color*/
 h1,h2,h3{
@@ -13,6 +15,51 @@ h1,h2,h3{
 body{background-color: var(--color-fondo);}
 th{background-color: var(--color-head);}
 /*botton*/
+html{
+    font-family: var(--font-standar);/*tipo de letra*/
+}
+body{
+    margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+body>header{
+    display: flex;
+    width: 100%;
+    height: var(--header-tamaño);
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: auto;
+    z-index: 1;
+}
+body>main {
+    flex-grow: 1; /* Este elemento se expandirá para ocupar el espacio restante */
+    margin-top: var(--header-tamaño); /* Altura del header */
+    margin-bottom: var(--Footer-tamaño); /* Altura del footer */
+}
+body>footer{
+    display: flex;
+    width: 100%;
+    height: var(--Footer-tamaño);
+    justify-content: center;
+    align-items: center;
+    padding-block: .3rem;
+    text-transform: uppercase;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--color-head);
+}
+
+
+header .fas{
+    font-size: 1.5em;
+}
+
 .primary-button {
     
     background-color: #57A99A;
@@ -27,26 +74,7 @@ th{background-color: var(--color-head);}
   }
 
 /*fin color*/
-body{
-    font-family: var(--font-standar);/*tipo de letra*/
-    font-size: 100%;/*tamaño*/
-    display: flex;
-    justify-content: center;/*centra el objeto en el horizontal*/
-    align-items: center;/*centra el objeto en el vertice vertical*/
-}
-footer{
-    width: 100%;
-    background-color: var(--color-head);
-    position: absolute;/*la posicion del objeto no cambia*/
-    bottom: 0;/*obliga al objeto a estar siempre abajo*/
-    left: 0;/*el objeto siempre empieza a la izquierda*/
-    color: var(--color-head);
-    border: 5px solid black; /*crea franja que rodea login*/
-    display: flex;
-    justify-content: center;/*centra linea horizontal*/
-    align-items: end;/*siempre al finalizar el siguiente empieza abajo*/
-    border-radius: 1rem;
-}
+
 h2{
     display: block;
     font-size: 1.5em;
@@ -55,19 +83,24 @@ h2{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+    color: black;
 }
 h3{
     margin:0.5rem 0;
 }
 .ventanalogin{
     background-color: var(--color-head);
-    display: flex;
-    justify-content: center;
     border: 5px solid black; /*crea franja que rodea login*/
     padding: 1.5rem; 
+    display: flex;
+    justify-content: center;/*centra el objeto en el horizontal*/
+    align-items: center;/*centra el objeto en el vertice vertical*/
+
+    
 }
 .form{
-    width: 100%;
+    width: 20em;
+    height: 20em;
     margin-top: 1rem;
 }
 .titulo{
@@ -84,15 +117,29 @@ h3{
 .buscador{
     background-color: var(--color-head);
     width: 100%;
+    height: 3rem;
     position: absolute;/*la posicion del objeto no cambia*/
-    top: 0;/*obliga al objeto a estar siempre abajo*/
+    top: 5rem;/*obliga al objeto a estar siempre abajo*/
     left: 0;/*el objeto siempre empieza a la izquierda*/
     color: var(--color-head);
-    border: 5px solid black; /*crea franja que rodea login*/
+    border-bottom: 5px solid black; /*crea franja que rodea login*/
     display: flex;
     justify-content: center;/*centra linea horizontal*/
-    align-items: end;/*siempre al finalizar el siguiente empieza abajo*/
-    border-radius: 1rem;
+    align-items: center;/*siempre al finalizar el siguiente empieza abajo*/
+}
+.barrasuperior{
+    background-color: var(--color-botton-inactivo);
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: 0rem;
+    left: 0;
+    display: flex;
+    justify-content: left;
+    align-items: end;
+}
+h1{
+    color: white;
 }
 /*botones*/
 .button{
