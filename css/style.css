@@ -40,7 +40,7 @@ body>header{
 body>main {
     flex-grow: 1; /* Este elemento se expandirá para ocupar el espacio restante */
     margin-top: var(--header-tamaño); /* Altura del header */
-    margin-bottom: var(--Footer-tamaño); /* Altura del footer */
+    margin-bottom: var(); /* Altura del footer */
 }
 body>footer{
     display: flex;
@@ -95,38 +95,31 @@ h3{
     display: flex;
     justify-content: center;/*centra el objeto en el horizontal*/
     align-items: center;/*centra el objeto en el vertice vertical*/
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
 
     
 }
 .form{
-    width: 20em;
-    height: 20em;
-    margin-top: 1rem;
+    width: 35rem;
+    height: 35rem;
+    margin-top: 2rem;
 }
 .titulo{
     display: flex;
     justify-content: center;
+    font-size: 2rem;
 }
 .inputbox{
     font-family: var(--font-standar);
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 .links{
-    font-size: 1.2rem;
+    font-size: 1.8rem;
 }
-.buscador{
-    background-color: var(--color-head);
-    width: 100%;
-    height: 3rem;
-    position: absolute;/*la posicion del objeto no cambia*/
-    top: 5rem;/*obliga al objeto a estar siempre abajo*/
-    left: 0;/*el objeto siempre empieza a la izquierda*/
-    color: var(--color-head);
-    border-bottom: 5px solid black; /*crea franja que rodea login*/
-    display: flex;
-    justify-content: center;/*centra linea horizontal*/
-    align-items: center;/*siempre al finalizar el siguiente empieza abajo*/
-}
+
 .barrasuperior{
     background-color: var(--color-botton-inactivo);
     width: 100%;
@@ -145,9 +138,9 @@ h1{
 .button{
     border: none;
     padding: 4rem 2rem 4rem 5 rem;
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 input{
     font-family: var(--font-standar);
-    font-size: 1.5rem;
+    font-size: 1.9rem;
 }

@@ -3,6 +3,19 @@
     position: relative;
     top: 7rem;
 }
+.buscador{
+    background-color: var(--color-head);
+    width: 100vw;
+    height: 5vh;
+    position: absolute;/*la posicion del objeto no cambia*/
+    top: 5rem;/*obliga al objeto a estar siempre abajo*/
+    left: 0;/*el objeto siempre empieza a la izquierda*/
+    color: var(--color-head);
+    border-bottom: 5px solid black; /*crea franja que rodea login*/
+    display: flex;
+    justify-content: center;/*centra linea horizontal*/
+    align-items: center;/*siempre al finalizar el siguiente empieza abajo*/
+}
 .barraLateral{
-    
+    display: flex;
 }
