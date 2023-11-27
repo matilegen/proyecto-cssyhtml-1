@@ -1,7 +1,7 @@
 @import "style.css";
 .panelDelAlbum{
-    position: relative;
-    top: 7rem;
+    display: flex;
+    margin-top: 4.9rem; /*distancia superiro. cuenta desde el borde superior 4.9*/
 }
 .buscador{
     background-color: var(--color-head);
@@ -17,5 +17,68 @@
     align-items: center;/*siempre al finalizar el siguiente empieza abajo*/
 }
 .barraLateral{
+    padding: 10%;
+    border-right: 2px solid black;
+}
+.ventanaFiltro{
+    background-color: var(--color-head);
+    border: 5px solid black;
+    padding: 1.5rem;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.tituloFiltro{
+    display: flex;
+    justify-content: space-between;
+    font-size: 3rem;
+    
+}
+.barramuestrafiguritas{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    width: 100%;
+    height: 100%;
+}
+
+.tituloalbum{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*card*/
+.areaDeFiguritas{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.templatecard{
+    margin: 5px;
+    background-color: gold;
+    width: 15vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    columns: 3;
+    border-radius: 0.7rem;
+}
+img{
+    width: 9vw;
+    height: 8vh;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    padding-top: 0.3rem;
+    border-radius: 15%;
+}
+.nombreCard{
+    border-bottom: 2px solid black;
+    font-size: 1.3em;
+    padding-left: 2%;
 }
